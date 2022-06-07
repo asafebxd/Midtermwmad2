@@ -1,6 +1,6 @@
 import { gettingData } from "./index.js";
 // import {data} from "./index"
-// console.log(gettingData())
+console.log(gettingData())
 const conatiner = document.getElementsByClassName("container")[0]
 // console.log(conatiner)
 const div = document.createElement("div")
@@ -8,11 +8,12 @@ conatiner.append(div)
 let obj
 gettingData().then((obj) => {
     console.log(obj)
-    const renderHtml = Array(obj).map((item)=>{
+    const renderHtml = Array(obj).map((item, index)=>{
         return (
             `
-            <div class ="current-box"> 
+            <div class ="current-box" key =${index}> 
                 <p class ="current-name"> Name ${item.name}</p>
+                <p class ="current-weather"> Name ${item.weather[0].main}</p>
                 <p class ="current-temp"> Temparachar ${item.main.temp}</p>
                 <p class ="current-maxtemp"> Maximum Temparachar:${item.main.temp_max}</p>
                 <p class ="current-mintemp">Minimum Temparachar :${item.main.temp_min}</p>
@@ -22,7 +23,7 @@ gettingData().then((obj) => {
             `
         )
     })
-    div.innerHTML = renderHtml.join("")
+    div.innerHTML = renderHtml
     // return obj
 }).catch((err) => {
     console.error(err)
