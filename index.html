@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,34 @@
     <link rel="stylesheet" href="./scss/index.css">
     <title>Weather App</title>
 </head>
+
 <body>
     <section>
-        <div class="container-current">
+
+        <div id="dropdown_favorite">
+            <select name="favcities" id="favorite_list">
+                <option value="Favorite Cities">Favorite Cities</option>
+            </select>
+        </div>
+
+        <input type="text" id="pac-input">
+
+        <div id="fake_data">
+            <div id="star_favorite">
+                <h1>Star</h1>
+            </div>
+
+        </div>
+        <div>
+            <p id="city_test_fake">city name</p>
+
+        </div>
+        <div class="container">
+
+        </div>
+    </section>
+    </section>
+    <div class="container-current">
 
         </div>
     </section>
@@ -24,8 +50,16 @@
         </div>        
     </section>
     <script type="module" src="./apikey.js"></script>
-    <script type="module" src="js/index.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcbBQmScont2iKzWm4mG_o-lSl23RYmPY&libraries=places">
+</script>
+<script type="module" src="js/index.js"></script>
     <script type="module" src="js/atsu.js"></script>
     <script type="module" src="js/asafe.js"></script>
+    <script type="module" src="./js/umut.js"></script>
+  <script type="module" src="./apikey.js"></script>
+
+
 </body>
+
 </html>
