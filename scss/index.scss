@@ -1,22 +1,7 @@
+@use"./umut.scss";
 
-
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    cursor: pointer;
-}
-
-#favorite_list {
-    // display: none;
-    // position: absolute;
-
-}
-
-#favorite_list {
-    &.show_list {
-        display: block;
-    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
